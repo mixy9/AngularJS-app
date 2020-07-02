@@ -6,10 +6,21 @@ class ContactForm {
 
     protected $db;
 
+    /**
+     * ContactForm constructor.
+     */
     public function __construct() {
         $this->db = Database::Connect();
     }
 
+    /**
+     * @param string $email
+     * @param string $firstname
+     * @param string $lastname
+     * @param string $username
+     * @param string $password
+     * @return false|string
+     */
     public function Register($email, $firstname, $lastname, $username, $password) {
         $query = $this->db->prepare("INSERT INTO user(email, firstname, lastname, username, password) VALUES (:email,:firstname,:lastname,:username,:password)");
         $query->bindParam("email", $email, PDO::PARAM_STR);
@@ -29,6 +40,9 @@ class ContactForm {
         ]]);
     }
 
+    /**
+     * @return false|string
+     */
     public function Fetch() {
         $query = $this->db->prepare("SELECT * FROM user");
         $query->execute();

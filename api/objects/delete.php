@@ -11,6 +11,5 @@ if (isset($data['employee'])) {
 
     // Delete the Task
     $task = new Task();
-
     $task->Delete($task_id);
 }

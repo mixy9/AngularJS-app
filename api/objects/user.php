@@ -16,11 +16,11 @@ class User
     }
 
     /**
-     * @param $email
-     * @param $firstname
-     * @param $lastname
-     * @param $username
-     * @param $password
+     * @param string $email
+     * @param string $firstname
+     * @param string $lastname
+     * @param string $username
+     * @param string $password
      * @return string
      */
     public function Register($email, $firstname, $lastname, $username, $password)

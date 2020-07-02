@@ -22,11 +22,11 @@ class Task
     /**
     * Add new Task
     *
-    * @param $name
-    * @param $email
-    * @param $phone
-    * @param $address
-    * @param $description
+    * @param string $name
+    * @param string $email
+    * @param string $phone
+    * @param string $address
+    * @param string $description
     *
     * @return string
     */
@@ -69,12 +69,12 @@ class Task
     /**
     * Update Task
     *
-    * @param $name
-    * @param $email
-    * @param $phone
-    * @param $address
-    * @param $description
-    * @param $employee_id
+    * @param string $name
+    * @param string $email
+    * @param string
+    * @param string $address
+    * @param string $description
+    * @param string $employee_id
     */
     public function Update($name, $email, $phone, $address, $description, $employee_id) {
         $query = $this->db->prepare("UPDATE employees SET name = :name, email = :email, phone = :phone, address = :address, description = :description WHERE id = :id");
@@ -90,7 +90,7 @@ class Task
     /**
     * Delete Task
     *
-    * @param $employee_id
+    * @param integer $employee_id
     */
     public function Delete($employee_id) {
         $query = $this->db->prepare("DELETE FROM employees WHERE id = :id");
