@@ -79,11 +79,11 @@
 
         <nav class="nav-menu d-none d-lg-block">
             <ul>
-                <li ng-class="{active: $state.includes('welcome')}"><a href="" ui-sref="welcome">Home</a></li>
+                <li ui-sref-active="active" ng-class="{active: $state.includes('welcome')}"><a ui-sref="welcome">Home</a></li>
                 <li><a href="">About</a></li>
-                <li ng-class="{ active: isActive('/service')}"><a href="" ui-sref="service">Services</a></li>
+                <li ui-sref-active="active" ng-class="{active: $state.includes('service')}"><a ui-sref="service">Services</a></li>
                 <li><a href="">Portfolio</a></li>
-                <li ng-class="{ active: '/contact')}"><a href="" ui-sref="contact">Contact us</a></li>
+                <li ui-sref-active="active" ng-class="{active: $state.includes('contact')}"><a ui-sref="contact">Contact us</a></li>
             </ul>
         </nav>
 

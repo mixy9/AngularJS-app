@@ -1,6 +1,6 @@
 app.controller("ctrl_welcome", ['$scope', '$http', '$window', '$location', function ($scope, $http, $location) {
 
-    // localization
+
     $scope.str_series_type = Globalize.localize("str_series_type");
     $scope.str_interval = Globalize.localize("str_interval");
     $scope.str_interval_type = Globalize.localize("str_interval_type");
@@ -8,8 +8,14 @@ app.controller("ctrl_welcome", ['$scope', '$http', '$window', '$location', funct
     $scope.alert = "alert alert-success";
     $scope.alertText = "Fill up all the Fields";
     $scope.btnName = "Register";
+
     $scope.logInForm = false;
     $scope.registerForm = true;
+
+    $scope.faq1 = false;
+    $scope.faq2 = false;
+    $scope.faq3 = false;
+    $scope.faq4 = false;
 
     $scope.users = [];
 
@@ -70,8 +76,8 @@ app.controller("ctrl_welcome", ['$scope', '$http', '$window', '$location', funct
                     }
                     else if (e.status === 500) {
                         $scope.alertText = "Only letters, numbers and underscore allowed!";
-                }
-            })
+                    }
+                })
         }
     };
 
@@ -120,6 +126,12 @@ app.controller("ctrl_welcome", ['$scope', '$http', '$window', '$location', funct
     $scope.signUp = function () {
         $scope.logInForm = false;
         $scope.registerForm = true;
+    };
+
+    $scope.enter = function (keyEvent) {
+        if (keyEvent.which === 13) {
+            register();
+        }
     };
 
     $scope.enter = function (keyEvent) {
