@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTfk_vArhqVIZ0nv9q090hN8.woff2) format('woff2'), url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+@font-face {
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/PfybUH-csLekLIU-pU-o7w.woff2) format('woff2'), url(https://fonts.gstatic.com/s/opensans/v13/uYKcPVoh6c5R0NpdEY5A-Q.woff) format('woff');
+}
+@font-face {
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(https://fonts.gstatic.com/s/opensans/v13/MTP_ySUJH_bn48VBG8sNSvk_vArhqVIZ0nv9q090hN8.woff2) format('woff2'), url(https://fonts.gstatic.com/s/opensans/v13/MTP_ySUJH_bn48VBG8sNShsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+@font-face {
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2'), url(https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+@font-face {
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(https://fonts.gstatic.com/s/opensans/v13/EInbV5DfGHOiMmvb1Xr-hvk_vArhqVIZ0nv9q090hN8.woff2) format('woff2'), url(https://fonts.gstatic.com/s/opensans/v13/EInbV5DfGHOiMmvb1Xr-hhsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+
+
+
+.logo-image {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+
+.sidebar, .sidebar:after, .off-canvas-sidebar:after {
+    background: linear-gradient(#38858A 10%, #23575A 80%);
+}
+
+.main-panel {
+    background-color: rgba(163, 187, 188, 0.23);
+}
+
+.select-nav {
+    width: 260px;
+    height: 130px;
+    text-align: center;
+}
+
+.select-nav:hover {
+    background-color: #184b4e;
+    animation: focus-in 500ms cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes focus-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.sidebar .nav li > a, .off-canvas-sidebar .nav li > a {
+    padding: 30px;
+    opacity: 1;
+    display: inline-grid;
+}
+
+.sidebar .nav i, .off-canvas-sidebar .nav i {
+    margin: auto;
+    opacity: 1;
+    color: white;
+}
+
+.nav-text {
+    padding-top: 5px;
+}
+
+.btn, .navbar .navbar-nav > a.btn {
+    background-color: #535B5B;
+}
+
+.score-txt {
+    font-size: 1.7em;
+    vertical-align: text-top;
+    display: inline;
+}
+
+.score-num {
+    font-size: 5.8em;
+    color: #535B5B;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.score-txt-large {
+    color: #535B5B;
+    text-align: center;
+    margin: 0;
+}
+
+.text-primary, a.text-primary:focus, a.text-primary:hover {
+    color: #4BACB2 !important;
+}
+
+.table > thead > tr > th {
+    font-size: 1.1em;
+}
+
+.vl {
+    border-left: 1.4px solid lightgray;
+}
+
+.form-check-label input[type="checkbox"]:checked + .form-check-sign:before {
+    background-color: #535B5B;
+}
+
+.sidebar .nav p, .off-canvas-sidebar .nav p {
+    color: rgb(255, 255, 255);
+}
+
+/*.sidebar .nav p:hover, .off-canvas-sidebar .nav p:hover {*/
+/*    color: rgb(255, 255, 255);*/
+/*}*/
+
+/*.nc-icon:hover {*/
+/*    color: rgb(255, 255, 255);*/
+/*}*/
+
+.form-check .form-check-sign::before, .form-check .form-check-sign::after {
+    background-color: rgba(83, 91, 91, 0.3);
+}
+
+@media (max-width: 991px)
+{
+    .my-custom-scrollbar {
+        position: relative;
+        overflow: auto;
+    }
+    .table-wrapper-scroll-x {
+        display: block;
+    }
+}
+
+.head-title {
+    text-align: center;
+}
+
+.ps-info {
+    text-align: left;
+}
+
+/*.logo-mini {*/
+/*    visibility: hidden;*/
+/*    opacity: 0;*/
+/*    transition: visibility 0s, opacity 0.5s linear;*/
+/*}*/
+
+.header-dash {
+    display: inline-flex;
+}
+
+.dash-icon {
+    padding: 13px;
+    max-width: 6%;
+    position: absolute;
+    right: 23px;
+}
+
+.dash-title {
+    padding: 5px;
+}

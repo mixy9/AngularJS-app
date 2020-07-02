@@ -1,0 +1,46 @@
+
+<!-- TODO -->
+
+<div id="hero2" class="d-flex justify-cntent-center align-items-center"></div>
+
+
+<main id="main">
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="section-title" data-aos="zoom-out">
+                <h2>We will do our best to help you</h2>
+                <p>Contact us</p>
+            </div>
+
+            <div class="row col-lg-6">
+                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                        <div class="validate"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                        <div class="validate"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" rows="3" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                        <div class="validate"></div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="loading">Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                    </div>
+                    <div class="text-left"><button type="submit">Send Message</button></div>
+                </form>
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
