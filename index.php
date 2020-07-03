@@ -112,7 +112,7 @@
                         class="bx bxl-google-plus"></i></a>
         </div>
         <div class="credits">
-            Designed by <a target="_blank" href="https://github.com/mixy9">Mihaela Trempetić</a>
+            Created by <a target="_blank" href="https://github.com/mixy9">Mihaela Trempetić</a>
         </div>
         <div class="copyright">
             &copy; Copyright <strong><span>Owly</span></strong>. All Rights Reserved

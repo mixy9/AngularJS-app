@@ -528,12 +528,12 @@ section {
   border-radius: 5px;
   transition: 0.3s;
   line-height: 1;
-  color: white;
+  color: var(--sec-color);
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
   margin-top: 6px;
-  border: 2px solid var(--sec-color);
-  background: var(--sec-color);
+  border: 1px solid var(--sec-color);
+  background: transparent;
 }
 
 .btn-crud:hover {
@@ -562,8 +562,7 @@ section {
 }
 
 .btn-sign:hover {
-  background: var(--prim-color);
-  color: white;
+  color: var(--prim-color);
   text-decoration: none;
   border: 1px solid var(--prim-color);
 }
@@ -582,7 +581,7 @@ section {
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
   margin-top: 6px;
-  border: 2px solid var(--sec-color);
+  border: 1px solid var(--sec-color);
   background: var(--sec-color);
 }
 
@@ -1611,4 +1610,8 @@ section {
 .page-item.active .page-link {
   background-color: var(--sec-color);
   border-color: var(--sec-color);
+}
+
+i {
+  font-size: 25px;
 }

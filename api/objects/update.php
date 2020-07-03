@@ -2,6 +2,8 @@
 
 $data = json_decode(file_get_contents('php://input'), TRUE);
 
+print_r($data['employee']);
+
 if (isset($data['employee'])) {
 
     require __DIR__ . '/library.php';
@@ -15,13 +17,14 @@ if (isset($data['employee'])) {
 
     // validations
     if ($name == NULL) {
+        echo $name;
         http_response_code(400);
         echo json_encode(['errors' => ["Name Field is required"]]);
 
     } else {
+
         // Update the Task
         $task = new Task();
-
         $task->Update($name, $email, $phone, $address, $description, $employee_id);
     }
 }

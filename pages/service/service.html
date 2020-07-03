@@ -19,7 +19,7 @@
                         <div class="col text-right">
                             <input type="submit" class="btn-crud" data-toggle="modal" data-target="#addEmployeeModal"
                                    value="Add New Employee">
-                            <input type="submit" class="btn-crud" data-toggle="modal" data-target="#addEmployeeModal"
+                            <input type="submit" class="btn-crud" data-toggle="modal" data-target="#deleteEmployeeModal"
                                    value="Delete">
                         </div>
                     </div>
@@ -55,11 +55,8 @@
                         <td>{{employee.address}}</td>
                         <td>{{employee.description}}</td>
                         <td>
-                            <a href="" data-target="#editEmployeeModal" data-toggle="modal"><i class="ri-edit-box-fill"
-                                                                                               ng-click="edit($index)"
-                                                                                               title="Edit"></i></a>
-                            <a href="" data-target="#deleteEmployeeModal" data-toggle="modal"><i
-                                    class="ri-delete-back-fill" ng-click="delete($index)" title="Delete"></i></a>
+                            <a href="" data-target="#editEmployeeModal" data-toggle="modal"><i class="ri-edit-box-fill" ng-click="EditTask($index)" title="Edit"></i></a>
+                            <a href="" data-target="#deleteEmployeeModal" data-toggle="modal"><i class="ri-delete-back-fill" ng-click="DeleteTask($index)" title="Delete"></i></a>
                         </td>
                     </tr>
                     </tbody>
@@ -120,8 +117,8 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-success" ng-click="addTask()" value="Add">
+                            <input type="button" class="btn-crud" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn-crud" ng-click="addTask()" value="Add">
                         </div>
                     </form>
                 </div>
@@ -159,41 +156,16 @@
                             </div>
                             <div class="form-group">
                                 <label>Address</label>
-                                <textarea ng-model="employee_details.address" class="form-control" required></textarea>
+                                <input ng-model="employee_details.address" type="text" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label>Description</label>
-                                <input ng-model="employee_details.description" type="text" class="form-control"
-                                       required>
+                                <input ng-model="employee_details.description" type="text" class="form-control" required>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-info" ng-click="updateTask()" value="Save changes">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <!-- Delete Modal HTML -->
-        <div id="deleteEmployeeModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form>
-                        <div class="modal-header">
-                            <h4 class="modal-title">Delete Employee</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Are you sure you want to delete these Records?</p>
-                            <p class="text-warning">
-                                <small>This action cannot be undone.</small>
-                            </p>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-danger" value="Delete">
+                            <input type="button" class="btn-crud" data-dismiss="modal" ng-click="cancelTask()" value="Cancel">
+                            <input type="submit" class="btn-crud" ng-click="updateTask()" value="Save changes">
                         </div>
                     </form>
                 </div>
