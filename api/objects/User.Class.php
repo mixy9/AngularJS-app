@@ -25,7 +25,6 @@ class User
      */
     public function Register($email, $firstname, $lastname, $username, $password)
     {
-
         $query = $this->db->prepare("INSERT INTO user(email, firstname, lastname, username, password) VALUES (:email,:firstname,:lastname,:username,:password)");
         $query->bindParam("email", $email, PDO::PARAM_STR);
         $query->bindParam("firstname", $firstname, PDO::PARAM_STR);
@@ -41,6 +40,18 @@ class User
             'lastname' => $lastname,
             'username' => $username,
             'password' => $password,
+        ]]);
+    }
+
+    /**
+     * @param $email
+     * @param $firstname
+     * @param $text
+     * @return string
+     */
+    public function Contact($email, $firstname, $text) {
+
+        return json_encode(['contact' => [
         ]]);
     }
 

@@ -5,7 +5,7 @@ $data = json_decode(file_get_contents('php://input'), TRUE);
 
 if (isset($data['user'])) {
 
-    require __DIR__ . '/user.php';
+    require __DIR__ . '/User.Class.php';
 
     $email = (isset($data['user']['email']) ? $data['user']['email'] : NULL);
     $firstname = (isset($data['user']['firstname']) ? $data['user']['firstname'] : NULL);

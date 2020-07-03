@@ -1,7 +1,6 @@
 app.controller("ctrl_service", ['$scope', 'svcApi', '$parse', '$http',
     function ($scope, svcApi, $parse, $http) {
 
-
         $scope.str_series_type = Globalize.localize("str_series_type");
         $scope.str_interval = Globalize.localize("str_interval");
         $scope.str_interval_type = Globalize.localize("str_interval_type");
@@ -39,7 +38,10 @@ app.controller("ctrl_service", ['$scope', 'svcApi', '$parse', '$http',
 
         $scope.EditTask = function (index) {
             $scope.employee_details = $scope.employees[index];
-            var modal_element = angular.element('#modal_update_task');
+        };
+
+        $scope.cancelTask = function () {
+            $scope.listTasks();
         };
 
         $scope.updateTask = function () {

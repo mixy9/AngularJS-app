@@ -1245,8 +1245,9 @@ section {
 # Contact
 --------------------------------------------------------------*/
 
-.contact {
-  height: 35.63rem;
+#contact-main {
+  min-height: 60vh;
+  height: auto;
 }
 
 .contact .info {
@@ -1299,6 +1300,10 @@ section {
 
 .contact .php-email-form .form-group {
   padding-bottom: 8px;
+}
+
+textarea {
+  max-height: 300px;
 }
 
 .contact .php-email-form .validate {
@@ -1610,8 +1615,4 @@ section {
 .page-item.active .page-link {
   background-color: var(--sec-color);
   border-color: var(--sec-color);
-}
-
-i {
-  font-size: 25px;
 }

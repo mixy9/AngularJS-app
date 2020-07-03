@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/user.php';
+require __DIR__ . '/User.Class.php';
 
 session_start();
 

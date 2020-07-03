@@ -21,7 +21,7 @@ app.controller("ctrl_welcome", ['$scope', '$http', '$window', '$location', funct
 
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 
-    $http.get('api/objects/user.php', {})
+    $http.get('api/objects/User.Class.php', {})
         .then(function success(e) {
             $scope.users = e.data.user;
             console.log($scope.users, 'Users');
