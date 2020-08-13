@@ -20,28 +20,28 @@ app.controller("ctrl_contact", ['$scope', 'svcApi', '$parse', '$http',
                 $http.post('api/objects/contact.php', {
                     user: $scope.user
                 })
-                    .then(function success(e) {
+                .then(function success(e) {
 
-                        $scope.errors = [];
+                    $scope.errors = [];
 
-                        $scope.users.push(e.data.user);
+                    $scope.users.push(e.data.user);
 
-                        if (e.status === 200) {
-                            $scope.alertText = "Your message has been sent. Thank you!";
-                            $scope.logInForm = true;
-                        }
-                    }, function error(e) {
-                        $scope.btnName = "Register";
-                        $scope.errors = e.data.errors;
-                        console.log($scope.errors, 'Errors');
+                    if (e.status === 200) {
+                        $scope.alertText = "Your message has been sent. Thank you!";
+                        $scope.logInForm = true;
+                    }
+                }, function error(e) {
+                    $scope.btnName = "Register";
+                    $scope.errors = e.data.errors;
+                    console.log($scope.errors, 'Errors');
 
-                        if (e.status === 400) {
-                            $scope.alertText = "Invalid email format!";
-                        }
-                        else if (e.status === 500) {
-                            $scope.alertText = "Only letters, numbers and underscore allowed!";
-                        }
-                    })
+                    if (e.status === 400) {
+                        $scope.alertText = "Invalid email format!";
+                    }
+                    else if (e.status === 500) {
+                        $scope.alertText = "Only letters, numbers and underscore allowed!";
+                    }
+                })
             }
         };
 

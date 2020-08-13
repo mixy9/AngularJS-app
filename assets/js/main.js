@@ -5,7 +5,6 @@
 * License: https://bootstrapmade.com/license/
 */
 !(function($) {
-  "use strict";
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
   $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
@@ -123,24 +122,24 @@
     $(this).find('.btn-get-started').addClass('animated fadeInUp');
   });
 
-  // Initate the hero bottom waves
-  if ($('#wave1').length && $('#wave2').length) {
-    wavify(document.querySelector('#wave1'), {
-      height: 40,
-      bones: 4,
-      amplitude: 40,
-      color: '#fff',
-      speed: .15
-    });
-
-    wavify(document.querySelector('#wave2'), {
-      height: 20,
-      bones: 3,
-      amplitude: 40,
-      color: 'rgba(255, 255, 255, .1)',
-      speed: .25
-    });
-  }
+  // // Initate the hero bottom waves
+  // if ($('#wave1').length && $('#wave2').length) {
+  //   wavify(document.querySelector('#wave1'), {
+  //     height: 40,
+  //     bones: 4,
+  //     amplitude: 40,
+  //     color: '#fff',
+  //     speed: .15
+  //   });
+  //
+  //   wavify(document.querySelector('#wave2'), {
+  //     height: 20,
+  //     bones: 3,
+  //     amplitude: 40,
+  //     color: 'rgba(255, 255, 255, .1)',
+  //     speed: .25
+  //   });
+  // }
 
   // Back to top button
   $(window).scroll(function() {
@@ -177,32 +176,6 @@
     $(document).ready(function() {
       $('.venobox').venobox();
     });
-  });
-
-  // Testimonials carousel (uses the Owl Carousel library)
-  $(".testimonials-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      768: {
-        items: 2
-      },
-      900: {
-        items: 3
-      }
-    }
-  });
-
-  // Portfolio details carousel
-  $(".portfolio-details-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1
   });
 
   // Initi AOS

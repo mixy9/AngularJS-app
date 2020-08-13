@@ -103,9 +103,9 @@
                         </div>
 
                         <div class="alert alert-info" role="alert"
-                             ng-class="{'alert-danger': alertText != 'Fill up all the Fields' && alertText != 'Registration Successful',
-                                        'alert-success': alertText == 'Registration Successful'}">
-                            {{alertText}}
+                             ng-class="{'alert-danger': alertTextReg != 'Fill up all the Fields' && alertTextReg != 'Registration Successful',
+                                        'alert-success': alertTextReg == 'Registration Successful'}">
+                            {{alertTextReg}}
                         </div>
 
                         <button class="btn-learn-more" name="save" ng-click="register(user)">{{btnName}}</button>
@@ -136,9 +136,9 @@
                         </div>
 
                         <div class="alert alert-info" role="alert"
-                             ng-class="{'alert-danger': alertText == 'Login Failed. Wrong username or password!' || alertText == 'Please input Username' || alertText == 'Please input Password',
-                                        'alert-success': alertText == 'Login Successful'}">
-                            {{alertText}}
+                             ng-class="{'alert-danger': alertTextLog == 'Login Failed. Wrong username or password!' || alertTextLog == 'Please input Username' || alertTextLog == 'Please input Password',
+                                        'alert-success': alertTextLog == 'Login Successful'}">
+                            {{alertTextLog}}
                         </div>
 
                         <button class="btn-learn-more" name="save" ng-click="logIn(user)">Log in</button>
@@ -167,12 +167,68 @@
                     <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
                 <div class="col-lg-3 cta-btn-container text-center">
-                    <a class="cta-btn align-middle" href="">Try it for Free</a>
+                    <a class="cta-btn align-middle animated fadeInUp" href="">Try it for Free</a>
                 </div>
             </div>
 
         </div>
     </section><!-- End Cta Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <ul class="nav nav-tabs row d-flex">
+                <li class="nav-item col-3" data-aos="zoom-in">
+                    <a class="nav-link active show" data-toggle="tab" href=""ng-click="showMondi()">
+                        <i class="ri-gps-line"></i>
+                        <h4 class="d-none d-lg-block">Modi sit est dela pireda nest</h4>
+                    </a>
+                </li>
+                <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
+                    <a class="nav-link" data-toggle="tab" href="" ng-click="showUnde()">
+                        <i class="ri-body-scan-line"></i>
+                        <h4 class="d-none d-lg-block">Unde praesenti mara setra le</h4>
+                    </a>
+                </li>
+                <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="200">
+                    <a class="nav-link" data-toggle="tab" href="" ng-click="showPariatu()">
+                        <i class="ri-sun-line"></i>
+                        <h4 class="d-none d-lg-block">Pariatur explica nitro dela</h4>
+                    </a>
+                </li>
+                <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="300">
+                    <a class="nav-link" data-toggle="tab" href="" ng-click="showNostru()">
+                        <i class="ri-store-line"></i>
+                        <h4 class="d-none d-lg-block">Nostrum qui dile node</h4>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="col-sm-12" data-aos="fade-up" ng-show="mondiShow">
+                <h3 class="title">Lorem Ipsum</h3>
+                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
+                    excepturi sint occaecati cupiditate non provid entatque corrupti quos dolores et quas molestias
+                    excepturi sint occaecati cupiditate non provident.</p>
+            </div>
+
+            <div class="col-sm-12" ng-show="undeShow">
+                <h3 class="title">Dolor Sit</h3>
+                <p class="description">Provid entatque corrupti quos dolores et quas molestias.</p>
+            </div>
+
+            <div class="col-sm-12" ng-show="pariatuShow">
+                <h3 class="title">Ipsum</h3>
+                <p class="description">Cupiditate non provid entatque corrupti quos dolores et quas molestias
+                    excepturi sint occaecati cupiditate non provident.</p>
+            </div>
+
+            <div class="col-sm-12" ng-show="nostruShow">
+                <h3 class="title">Lorem</h3>
+                <p class="description">Entatque corrupti quos dolores et quas molestias
+                    excepturi sint occaecati cupiditate non provident.</p>
+            </div>
+        </div>
+    </section><!-- End Features Section -->
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
@@ -286,40 +342,6 @@
 
         </div>
     </section><!-- End Portfolio Section -->
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-
-            <ul class="nav nav-tabs row d-flex">
-                <li class="nav-item col-3" data-aos="zoom-in">
-                    <a class="nav-link active show" data-toggle="tab" href="">
-                        <i class="ri-gps-line"></i>
-                        <h4 class="d-none d-lg-block">Modi sit est dela pireda nest</h4>
-                    </a>
-                </li>
-                <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
-                    <a class="nav-link" data-toggle="tab" href="">
-                        <i class="ri-body-scan-line"></i>
-                        <h4 class="d-none d-lg-block">Unde praesenti mara setra le</h4>
-                    </a>
-                </li>
-                <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="200">
-                    <a class="nav-link" data-toggle="tab" href="">
-                        <i class="ri-sun-line"></i>
-                        <h4 class="d-none d-lg-block">Pariatur explica nitro dela</h4>
-                    </a>
-                </li>
-                <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="300">
-                    <a class="nav-link" data-toggle="tab" href="">
-                        <i class="ri-store-line"></i>
-                        <h4 class="d-none d-lg-block">Nostrum qui dile node</h4>
-                    </a>
-                </li>
-            </ul>
-
-        </div>
-    </section><!-- End Features Section -->
 
     <!-- F.A.Q Section -->
     <section id="faq" class="faq">

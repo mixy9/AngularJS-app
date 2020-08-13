@@ -6,7 +6,8 @@ app.controller("ctrl_welcome", ['$scope', '$http', '$window', '$location', funct
     $scope.str_interval_type = Globalize.localize("str_interval_type");
 
     $scope.alert = "alert alert-success";
-    $scope.alertText = "Fill up all the Fields";
+    $scope.alertTextReg = "Fill up all the Fields";
+    $scope.alertTextLog = "Fill up all the Fields";
     $scope.btnName = "Register";
 
     $scope.logInForm = false;
@@ -16,6 +17,11 @@ app.controller("ctrl_welcome", ['$scope', '$http', '$window', '$location', funct
     $scope.faq2 = false;
     $scope.faq3 = false;
     $scope.faq4 = false;
+
+    $scope.mondiShow = true;
+    $scope.undeShow = false;
+    $scope.pariatuShow = false;
+    $scope.nostruShow = false;
 
     $scope.users = [];
 
@@ -32,22 +38,22 @@ app.controller("ctrl_welcome", ['$scope', '$http', '$window', '$location', funct
         $scope.btnName = "Register";
 
         if (angular.isUndefined(user.email) || user.email === "") {
-            $scope.alertText = "Please input email";
+            $scope.alertTextReg = "Please input email";
         }
         else if (angular.isUndefined(user.firstname) || user.firstname === "") {
-            $scope.alertText = "Please input firstname";
+            $scope.alertTextReg = "Please input firstname";
         }
         else if (angular.isUndefined(user.lastname) || user.lastname === "") {
-            $scope.alertText = "Please input lastname";
+            $scope.alertTextReg = "Please input lastname";
         }
         else if (angular.isUndefined(user.username) || user.username === "") {
-            $scope.alertText = "Please input username";
+            $scope.alertTextReg = "Please input username";
         }
         else if (angular.isUndefined(user.password) || user.password === "") {
-            $scope.alertText = "Please input password";
+            $scope.alertTextReg = "Please input password";
         }
         else if (user.password !== $scope.repassword) {
-            $scope.alertText = "Password didn't match";
+            $scope.alertTextReg = "Password didn't match";
         }
         else {
             $scope.btnName = "Checking...";
@@ -63,8 +69,15 @@ app.controller("ctrl_welcome", ['$scope', '$http', '$window', '$location', funct
                     $scope.users.push(e.data.user);
 
                     if (e.status === 200) {
-                        $scope.alertText = "Registration Successful";
+                        $scope.alertTextReg = "Registration Successful";
                         $scope.logInForm = true;
+
+                        user.email = "";
+                        user.firstname = "";
+                        user.lastname = "";
+                        user.username = "";
+                        user.password = "";
+                        $scope.repassword = "";
                     }
                 }, function error(e) {
                     $scope.btnName = "Register";
@@ -72,10 +85,10 @@ app.controller("ctrl_welcome", ['$scope', '$http', '$window', '$location', funct
                     console.log($scope.errors, 'Errors');
 
                     if (e.status === 400) {
-                        $scope.alertText = "Invalid email format!";
+                        $scope.alertTextReg = "Invalid email format!";
                     }
                     else if (e.status === 500) {
-                        $scope.alertText = "Only letters, numbers and underscore allowed!";
+                        $scope.alertTextReg = "Only letters, numbers and underscore allowed!";
                     }
                 })
         }
@@ -84,10 +97,10 @@ app.controller("ctrl_welcome", ['$scope', '$http', '$window', '$location', funct
     $scope.logIn = function (user) {
 
         if (angular.isUndefined(user.username) || user.username === "") {
-            $scope.alertText = "Please input Username";
+            $scope.alertTextLog = "Please input Username";
         }
         else if (angular.isUndefined(user.password) || user.password === "") {
-            $scope.alertText = "Please input Password";
+            $scope.alertTextLog = "Please input Password";
         }
         else {
             $scope.btnName = "Checking...";
@@ -103,7 +116,10 @@ app.controller("ctrl_welcome", ['$scope', '$http', '$window', '$location', funct
                 $scope.errors = [];
 
                 if (e.status === 200) {
-                    $scope.alertText = "Login Successful";
+                    $scope.registerForm = true;
+                    $scope.alertTextLog = "Login Successful";
+                    user.username = "";
+                    user.password = "";
                     $location.path('/service');
                 }
 
@@ -113,7 +129,7 @@ app.controller("ctrl_welcome", ['$scope', '$http', '$window', '$location', funct
                 console.log($scope.errors, 'Errors');
 
                 if (e.status === 500) {
-                    $scope.alertText = "Login Failed. Wrong username or password!";
+                    $scope.alertTextLog = "Login Failed. Wrong username or password!";
                 }
             });
         }
@@ -134,10 +150,32 @@ app.controller("ctrl_welcome", ['$scope', '$http', '$window', '$location', funct
         }
     };
 
-    $scope.enter = function (keyEvent) {
-        if (keyEvent.which === 13) {
-            register();
-        }
+    $scope.showMondi = function () {
+        $scope.mondiShow = true;
+        $scope.undeShow = false;
+        $scope.pariatuShow = false;
+        $scope.nostruShow = false;
+    };
+
+    $scope.showUnde = function () {
+        $scope.mondiShow = false;
+        $scope.undeShow = true;
+        $scope.pariatuShow = false;
+        $scope.nostruShow = false;
+    };
+
+    $scope.showPariatu = function () {
+        $scope.mondiShow = false;
+        $scope.undeShow = false;
+        $scope.pariatuShow = true;
+        $scope.nostruShow = false;
+    };
+
+    $scope.showNostru = function () {
+        $scope.mondiShow = false;
+        $scope.undeShow = false;
+        $scope.pariatuShow = false;
+        $scope.nostruShow = true;
     };
 
 }]);

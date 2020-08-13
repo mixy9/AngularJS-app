@@ -39,6 +39,7 @@ app.controller("mainCtrl", ["$rootScope", "$scope", "$log", '$location', '$state
     function ($rootScope, $scope, $log, $location, $state) {
         $log.info("Angular application started!");
 
+        $scope.currentPath = $location.path();
         $scope.$state = $state;
     }
 ]);

@@ -79,14 +79,13 @@
 
         <nav class="nav-menu d-none d-lg-block">
             <ul>
-                <li ui-sref-active="active" ng-class="{active: $state.includes('welcome')}"><a ui-sref="welcome">Home</a></li>
-                <li><a href="">About</a></li>
-                <li ui-sref-active="active" ng-class="{active: $state.includes('service')}"><a ui-sref="service">Services</a></li>
-                <li><a href="">Portfolio</a></li>
-                <li ui-sref-active="active" ng-class="{active: $state.includes('contact')}"><a ui-sref="contact">Contact us</a></li>
+                <li ui-sref-active="active" ng-class="{active: $state.includes('welcome')}"><a href="#welcome" ui-sref="welcome">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li ng-show="currentPath === '/service'" ui-sref-active="active" ng-class="{active: $state.includes('service')}"><a href="#service" ui-sref="service">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li ui-sref-active="active" ng-class="{active: $state.includes('contact')}"><a href="#contact" ui-sref="contact">Contact us</a></li>
             </ul>
         </nav>
-
     </div>
 </header>
 
@@ -106,10 +105,10 @@
             <a class="instagram" target="_blank" href="https://github.com/mixy9"><i class="bx bxl-instagram"></i></a>
             <a class="linkedin" target="_blank"
                href="https://www.linkedin.com/in/mihaela-trempeti%C4%87-40239317b/?originalSubdomain=hr"><i
-                        class="bx bxl-linkedin"></i></a>
+               class="bx bxl-linkedin"></i></a>
             <a class="linkedin" target="_blank"
                href="https://www.linkedin.com/in/mihaela-trempeti%C4%87-40239317b/?originalSubdomain=hr"><i
-                        class="bx bxl-google-plus"></i></a>
+               class="bx bxl-google-plus"></i></a>
         </div>
         <div class="credits">
             Created by <a target="_blank" href="https://github.com/mixy9">Mihaela Trempetić</a>
